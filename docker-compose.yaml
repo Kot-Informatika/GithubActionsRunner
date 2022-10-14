@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+    runner:
+      build: .
+      environment:
+        RUNNER_NAME: "$USER-pc"
+        REPO_URL: "$REPO_URL"
+        RUNNER_TOKEN: "$RUNNER_TOKEN"
+        RUNNER_SCOPE: "repo"
+        LABELS: ubuntu-latest
+      restart: always
